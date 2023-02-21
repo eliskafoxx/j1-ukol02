@@ -9,7 +9,7 @@ public class HlavniProgram {
 
     public void start() {
 
-
+        /*
         zofka.setLocation(150, 150);
         BarevnyCtverec(100, Color.black);
 
@@ -24,8 +24,12 @@ public class HlavniProgram {
 
         zofka.setLocation(115, 300);
 
-        //zmrzlina
+  */
         Zmrzlina();
+
+        Snehulak();
+
+
 
     }
 
@@ -68,12 +72,35 @@ public class HlavniProgram {
     }
 
     public void Zmrzlina () {
-        zofka.setLocation(115, 300);
+        zofka.setLocation(115, 500);
         BarevneKolecko(8, Color.pink);
         zofka.turnRight(90);
-        zofka.setLocation(113, 315);
+        zofka.setLocation(113, 515);
         BarevnyTrojuhelnik(187, Color.orange);
         }
+
+     public void Snehulak ()  {
+         zofka.setLocation(602, 300);
+         BarevneKolecko(4, Color.gray);
+         zofka.setLocation(600, 400);
+         BarevneKolecko(6, Color.gray);
+         zofka.setLocation(598, 540);
+         BarevneKolecko(8, Color.gray);
+
+             //ruce
+             zofka.setLocation(505, 430);
+             BarevneKolecko(2, Color.gray);
+             zofka.setLocation(695, 430);
+             BarevneKolecko(2, Color.gray);
+
+             //mrkev
+             zofka.setLocation(595, 350);
+             BarevnyTrojuhelnik(20, Color.red);
+         }
+
+
+
+
 
 
 
