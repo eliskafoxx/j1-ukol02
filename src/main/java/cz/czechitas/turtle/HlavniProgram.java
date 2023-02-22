@@ -9,7 +9,7 @@ public class HlavniProgram {
 
     public void start() {
 
-        /*
+
         zofka.setLocation(150, 150);
         BarevnyCtverec(100, Color.black);
 
@@ -22,12 +22,15 @@ public class HlavniProgram {
         zofka.setLocation(700, 100);
         BarevneKolecko(5, Color.lightGray);
 
+        zofka.setLocation(950, 150);
+        PravouhlyTrojuhelnik(100, 200, Color.pink);
+
         zofka.setLocation(115, 300);
 
-  */
-       // Zmrzlina();
 
-        //Snehulak();
+        Zmrzlina();
+
+        Snehulak();
 
         Masinka();
 
@@ -74,6 +77,22 @@ public class HlavniProgram {
             zofka.turnRight(5);
         }
     }
+
+    private void PravouhlyTrojuhelnik (double odvesna, double prepona, Color barva) {
+        prepona = Math.sqrt(2*Math.pow(odvesna, 2));
+        zofka.setPenColor(barva);
+
+        zofka.move(odvesna);
+        zofka.turnLeft(135);
+        zofka.move(prepona);
+        zofka.turnLeft(135);
+        zofka.move(odvesna);
+        zofka.turnLeft(90);
+
+
+
+    }
+
 
     private void Zmrzlina () {
         zofka.setLocation(115, 500);
@@ -143,8 +162,12 @@ public class HlavniProgram {
              private void CowCatcher () {
                 zofka.turnLeft(90);
                 zofka.move(270);
-                zofka.turnRight(90);
-
+                zofka.turnLeft(90);
+                zofka.penUp();
+                zofka.move(40);
+                zofka.turnRight(180);
+                zofka.penDown();
+                PravouhlyTrojuhelnik (130, 270, Color.red);
              }
 
 
