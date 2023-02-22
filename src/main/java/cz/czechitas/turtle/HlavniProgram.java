@@ -9,7 +9,7 @@ public class HlavniProgram {
 
     public void start() {
 
-/*
+
         zofka.setLocation(150, 150);
         BarevnyCtverec(100, Color.black);
 
@@ -31,7 +31,7 @@ public class HlavniProgram {
         Zmrzlina();
 
         Snehulak();
-*/
+
         Masinka();
 
 
@@ -145,6 +145,7 @@ public class HlavniProgram {
              BudkaStrojvedouci();
              CowCatcher();
              Komin();
+             Bago ();
          }
 
              private void Napravy () {
@@ -194,7 +195,20 @@ public class HlavniProgram {
              }
 
              private void Bago () {
+                zofka.penDown();
+                zofka.turnLeft(90);
+                zofka.move(30);
+                zofka.turnRight(45);
+                BarevneKolecko(1.25, Color.darkGray);
 
+                for (int i = 0; i < 5; i++) {
+                     zofka.penUp();
+                     zofka.turnRight(30);
+                     zofka.move(50);
+                     zofka.penDown();
+                     BarevneKolecko(1.75, Color.darkGray);
+                 }
+                zofka.turnRight(90);
              }
 
 
