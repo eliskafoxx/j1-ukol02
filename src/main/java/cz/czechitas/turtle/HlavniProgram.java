@@ -25,9 +25,11 @@ public class HlavniProgram {
         zofka.setLocation(115, 300);
 
   */
-        Zmrzlina();
+       // Zmrzlina();
 
-        Snehulak();
+        //Snehulak();
+
+        Masinka();
 
 
 
@@ -38,7 +40,7 @@ public class HlavniProgram {
 
 
 
-    public void BarevnyCtverec(double delkaStrany, Color barva) {
+    private void BarevnyCtverec(double delkaStrany, Color barva) {
         zofka.setPenColor(barva);
         for (int i = 0; i < 4; i++) {
             zofka.move(delkaStrany);
@@ -46,7 +48,7 @@ public class HlavniProgram {
         }
     }
 
-    public void BarevnyTrojuhelnik(double delkaStrany, Color barva) {
+    private void BarevnyTrojuhelnik(double delkaStrany, Color barva) {
         zofka.setPenColor(barva);
         for (int i = 0; i < 3; i++) {
             zofka.move(delkaStrany);
@@ -55,7 +57,7 @@ public class HlavniProgram {
         }
     }
 
-    public void BarevnyObdelnik(double delkaStranyA,double delkaStranyB, Color barva) {
+    private void BarevnyObdelnik(double delkaStranyA,double delkaStranyB, Color barva) {
         zofka.setPenColor(barva);
         for (int i = 0; i < 2; i++) {
             zofka.move(delkaStranyA);
@@ -65,7 +67,7 @@ public class HlavniProgram {
         }
     }
 
-   public void BarevneKolecko (double delkaStrany, Color barva) {
+   private void BarevneKolecko (double delkaStrany, Color barva) {
         zofka.setPenColor(barva);
         for (int i = 0; i < 72; i++) {
             zofka.move(delkaStrany);
@@ -73,7 +75,7 @@ public class HlavniProgram {
         }
     }
 
-    public void Zmrzlina () {
+    private void Zmrzlina () {
         zofka.setLocation(115, 500);
         BarevneKolecko(8, Color.pink);
         zofka.turnRight(90);
@@ -82,7 +84,7 @@ public class HlavniProgram {
         zofka.turnLeft(90);
         }
 
-     public void Snehulak () {
+     private void Snehulak () {
          zofka.turnRight(90);
          zofka.setLocation(602, 300);
          BarevneKolecko(4, Color.cyan);
@@ -93,6 +95,7 @@ public class HlavniProgram {
          Ruce();
          Mrkev();
          Oci();
+         zofka.turnLeft(90);
      }
              private void Ruce () {
              zofka.setLocation(505, 430);
@@ -114,6 +117,35 @@ public class HlavniProgram {
             zofka.penDown();
             BarevneKolecko(0.25, Color.black);
          }
+
+         private  void Masinka () {
+             zofka.setLocation(950, 650);
+             BarevnyObdelnik(130, 270, Color.black);
+             zofka.turnRight(90);
+             Napravy();
+             BudkaStrojvedouci();
+             CowCatcher();
+         }
+             private void Napravy () {
+                 zofka.move(70);
+                 BarevneKolecko(3.85, Color.black);
+                 zofka.move(120);
+                 BarevneKolecko(3.85, Color.black);
+             }
+
+             private void BudkaStrojvedouci () {
+                 zofka.move(80);
+                 zofka.turnLeft(90);
+                 BarevnyObdelnik(270, 180, Color.black);
+                 BarevneKolecko(8, Color.black);
+             }
+
+             private void CowCatcher () {
+                zofka.turnLeft(90);
+                zofka.move(270);
+                zofka.turnRight(90);
+
+             }
 
 
 
