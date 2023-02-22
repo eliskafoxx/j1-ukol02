@@ -9,7 +9,7 @@ public class HlavniProgram {
 
     public void start() {
 
-
+/*
         zofka.setLocation(150, 150);
         BarevnyCtverec(100, Color.black);
 
@@ -31,7 +31,7 @@ public class HlavniProgram {
         Zmrzlina();
 
         Snehulak();
-
+*/
         Masinka();
 
 
@@ -139,35 +139,62 @@ public class HlavniProgram {
 
          private  void Masinka () {
              zofka.setLocation(950, 650);
-             BarevnyObdelnik(130, 270, Color.black);
+             BarevnyObdelnik(130, 270, Color.blue);
              zofka.turnRight(90);
              Napravy();
              BudkaStrojvedouci();
              CowCatcher();
+             Komin();
          }
+
              private void Napravy () {
+                zofka.penUp();
                  zofka.move(70);
+                 zofka.penDown();
                  BarevneKolecko(3.85, Color.black);
+                 zofka.penUp();
                  zofka.move(120);
+                 zofka.penDown();
                  BarevneKolecko(3.85, Color.black);
              }
 
              private void BudkaStrojvedouci () {
+                zofka.penUp();
                  zofka.move(80);
+                 zofka.penDown();
                  zofka.turnLeft(90);
-                 BarevnyObdelnik(270, 180, Color.black);
+                 BarevnyObdelnik(270, 180, Color.blue);
                  BarevneKolecko(8, Color.black);
              }
 
              private void CowCatcher () {
                 zofka.turnLeft(90);
+                zofka.penUp();
                 zofka.move(270);
+                zofka.penDown();
                 zofka.turnLeft(90);
                 zofka.penUp();
                 zofka.move(40);
                 zofka.turnRight(180);
                 zofka.penDown();
                 PravouhlyTrojuhelnik (130, 270, Color.red);
+             }
+
+             private void Komin () {
+            zofka.penUp();
+            zofka.move(170);
+            zofka.turnRight(90);
+            zofka.move(100);
+            zofka.turnLeft(180);
+            zofka.penDown();
+            BarevnyObdelnik(50,150,Color.black);
+            zofka.turnRight(90);
+            zofka.penUp();
+            zofka.move(150);
+             }
+
+             private void Bago () {
+
              }
 
 
