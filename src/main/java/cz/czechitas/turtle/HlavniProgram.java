@@ -81,21 +81,29 @@ public class HlavniProgram {
 
      public void Snehulak ()  {
          zofka.setLocation(602, 300);
-         BarevneKolecko(4, Color.gray);
+         BarevneKolecko(4, Color.cyan);
          zofka.setLocation(600, 400);
-         BarevneKolecko(6, Color.gray);
+         BarevneKolecko(6, Color.cyan);
          zofka.setLocation(598, 540);
-         BarevneKolecko(8, Color.gray);
+         BarevneKolecko(8, Color.cyan);
 
              //ruce
              zofka.setLocation(505, 430);
-             BarevneKolecko(2, Color.gray);
+             BarevneKolecko(2, Color.cyan);
              zofka.setLocation(695, 430);
-             BarevneKolecko(2, Color.gray);
+             BarevneKolecko(2, Color.cyan);
 
              //mrkev
              zofka.setLocation(595, 350);
              BarevnyTrojuhelnik(20, Color.red);
+
+             //oci
+            zofka.setLocation(585,320);
+            BarevneKolecko(0.25, Color.black);
+            zofka.penUp();
+            zofka.move(38);
+            zofka.penDown();
+            BarevneKolecko(0.25, Color.black);
          }
 
 
