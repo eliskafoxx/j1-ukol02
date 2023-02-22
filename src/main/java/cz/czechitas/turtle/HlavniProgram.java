@@ -31,6 +31,8 @@ public class HlavniProgram {
 
 
 
+
+
     }
 
 
@@ -77,27 +79,34 @@ public class HlavniProgram {
         zofka.turnRight(90);
         zofka.setLocation(113, 515);
         BarevnyTrojuhelnik(187, Color.orange);
+        zofka.turnLeft(90);
         }
 
-     public void Snehulak ()  {
+     public void Snehulak () {
+         zofka.turnRight(90);
          zofka.setLocation(602, 300);
          BarevneKolecko(4, Color.cyan);
          zofka.setLocation(600, 400);
          BarevneKolecko(6, Color.cyan);
          zofka.setLocation(598, 540);
          BarevneKolecko(8, Color.cyan);
-
-             //ruce
+         Ruce();
+         Mrkev();
+         Oci();
+     }
+             private void Ruce () {
              zofka.setLocation(505, 430);
              BarevneKolecko(2, Color.cyan);
              zofka.setLocation(695, 430);
              BarevneKolecko(2, Color.cyan);
+            }
 
-             //mrkev
+            private void Mrkev () {
              zofka.setLocation(595, 350);
              BarevnyTrojuhelnik(20, Color.red);
+             }
 
-             //oci
+             private void Oci () {
             zofka.setLocation(585,320);
             BarevneKolecko(0.25, Color.black);
             zofka.penUp();
@@ -105,10 +114,6 @@ public class HlavniProgram {
             zofka.penDown();
             BarevneKolecko(0.25, Color.black);
          }
-
-
-
-
 
 
 
