@@ -208,7 +208,7 @@ public class HlavniProgram {
                      zofka.penDown();
                      BarevneKolecko(1.75, Color.darkGray);
                  }
-                zofka.turnRight(90);
+                zofka.turnLeft(105);
              }
 
 
